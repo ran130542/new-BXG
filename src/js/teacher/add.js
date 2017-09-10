@@ -1,2 +1,3 @@
-require('../common/header.js')
-require('../common/aside.js')
+require('../common/aside');
+require('../common/header');
+require('../common/common');
