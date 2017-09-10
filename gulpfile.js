@@ -8,13 +8,18 @@ var concat = require('gulp-concat');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
-var htmlreplace = require('gulp');
+var htmlreplace = require('gulp-html-replace');
 
 
 
 /*html的处理*/
 gulp.task('html', () => {
   gulp.src(['src/**/*.html', './index.html'])
+  .pipe(htmlreplace({
+    styles:gulp.src('src/html/common/css.html'),
+    aside:gulp.src('src/html/common/aside.html'),
+    header:gulp.src('src/html/common/header.html'),
+  }))
     .pipe(htmlmin({
       collapseWhitespace: true,
       minifyJS: true,
