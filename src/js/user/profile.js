@@ -1,6 +1,6 @@
 require('../common/header.js');
 require('../common/aside.js');
-require('../common/common');
+require('../common/common.js');
 
 
 
@@ -14,4 +14,6 @@ $.ajax({
     }
   }
 })
+
+
 
