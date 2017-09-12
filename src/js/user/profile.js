@@ -15,5 +15,16 @@ $.ajax({
   }
 })
 
-
+$('html').on('click','#makesure',function(){
+  $.ajax({
+    url:'/v6/teacher/modify',
+    type:"post",
+     data: $('#teacher-profile-form').serialize(),
+     success:function(data){
+      if(data.code == 200){
+        alert('ok')
+      }
+     }
+  })
+})
 
