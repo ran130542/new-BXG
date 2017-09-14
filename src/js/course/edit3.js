@@ -30,6 +30,7 @@ $(document).on('click', '.showdetail', function () {
     $.get('/v6/course/chapter/edit', { 'ct_id': ct_id }, function (data) {
       if (data.code == 200) {
         $('#chapterModal').html(template('motaikuang', data.result));
+      
        }
     })
   }
@@ -101,3 +102,4 @@ function getindex(ct_id) {
     }
   }
 }
+
