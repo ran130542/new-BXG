@@ -1,6 +1,8 @@
 require('../common/header.js')
 require('../common/aside.js')
 require('../common/common')
+require('../common/ajaxloading')
+
 var paths = require('../common/getpath')
 var p = paths.getpath('tc_id');
 $.get('/v6/teacher/edit', { tc_id: p }, function (data) {

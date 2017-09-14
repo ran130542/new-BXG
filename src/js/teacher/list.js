@@ -2,6 +2,7 @@ require('../common/header.js')
 require('../common/aside.js')
 require('../common/common')
 
+require('../common/ajaxloading')
 
 $.get('/v6/teacher', function (data) {
   if (data.code == 200) {

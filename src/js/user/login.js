@@ -18,6 +18,8 @@
 //     })
 // });
 
+require('../common/common')
+require('../common/ajaxloading')
 
 
 $(() => {

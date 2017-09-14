@@ -19,6 +19,8 @@ gulp.task('html', () => {
     styles:gulp.src('src/html/common/css.html'),
     aside:gulp.src('src/html/common/aside.html'),
     header:gulp.src('src/html/common/header.html'),
+    courseaside:gulp.src('src/html/common/course/aside.html'),
+    courseheader:gulp.src('src/html/common/course/header.html')
   }))
     .pipe(htmlmin({
       collapseWhitespace: true,
@@ -44,7 +46,9 @@ var otherjs = [
   'node_modules/jquery/dist/jquery.js',
   'node_modules/bootstrap/dist/js/bootstrap.js',
   'node_modules/art-template/lib/template-web.js',
-  'node_modules/jquery-form/dist/jquery.form.min.js'
+  'node_modules/jquery-form/dist/jquery.form.min.js',
+  'node_modules/jquery.cookie/jquery.cookie.js',
+  'node_modules/nprogress/nprogress.js'
 ]
 gulp.task('otherjs', () => {
   gulp.src(otherjs)

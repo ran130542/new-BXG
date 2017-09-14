@@ -1,6 +1,8 @@
 require('../common/header.js')
 require('../common/aside.js')
 require('../common/common')
+require('../common/ajaxloading')
+
 $.get('/v6/category/top',function (data) {  
   if (data.code == 200) {
     $('#category-top-select').html(template('select-tpl', data.result));

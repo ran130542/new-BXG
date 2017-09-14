@@ -2,6 +2,7 @@ require('../common/aside');
 require('../common/header');
 require('../common/common');
 
+require('../common/ajaxloading')
 
 $('.teacher-add').ajaxForm({
   delegation:true,
